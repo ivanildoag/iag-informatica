@@ -1,0 +1,119 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/*INDEX*/
+#index_body {
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+nav, main, header, footer {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+header {
+	padding: 1em 0 1em 0;
+}
+header img {
+	height: 125px;
+}
+nav {
+	text-align: center;
+	box-sizing: border-box;
+	background-color: teal;
+	padding: 10px 0 10px 0;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+}
+nav a:hover {
+	text-decoration: underline;
+}
+nav ul li {
+	list-style-type: none;
+	display: inline;
+	box-sizing: border-box;
+	margin: 0 1em 0 1em;
+}
+#pages_view {
+	width: 100%;
+	background-color: white;
+}
+
+footer {
+	background-color: teal;
+	color: white;
+	margin-top: 13px;
+	margin-bottom: 1em;
+	text-align: center;
+	padding: 5px;
+	box-sizing: border-box;
+	font-size: 10pt;
+}
+
+/*PRODUTOS*/
+body:not(#index_body){
+	padding: 1em;
+}
+
+p {
+	margin-top: 1em;
+
+}
+
+section {
+	border-bottom: 1px solid black;
+	display: table;
+	padding-bottom: 1em;
+}
+
+section .image {
+	width: 100px;
+	float: left;
+}
+
+section .content {
+	float: right;
+	width: calc(100% - 130px);
+}
+
+section img {
+	width: 100%;
+	max-height: 100px;
+	margin-top: 2em;
+}
+
+section button {
+	background-color: teal;
+	color: white;
+	border: none;
+	outline: none;
+	padding: 5px;
+	margin-left: 1em;
+	cursor: pointer;
+}
+
+section button:hover {
+	background-color: #00AAAA;
+}
+
+section .titulo {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 1.2em;
+}
+
+.price-p {
+	text-align: center;
+}
+
+.price {
+	color: blue;
+	font-weight: bold;
+}

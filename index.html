@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="index_body">
+	<header>
+		<img src="img/logo.png" alt="Logo do website">
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="inicio.html" target="pages_view">Início</a>
+			</li>
+			<li>
+				<a href="armazenamento.html" target="pages_view">Armazenamento</a>
+			</li>
+			<li>
+				<a href="computadores.html" target="pages_view">Computadores</a>
+			</li>
+			<li>
+				<a href="gamer.html" target="pages_view">Gamer</a>
+			</li>
+			<li>
+				<a href="hardware.html" target="pages_view">Hardware</a>
+			</li>
+			<li>
+				<a href="perifericos.html" target="pages_view">Periféricos</a>
+			</li>
+			<li>
+				<a href="placas_de_video.html" target="pages_view">Placas de Vídeo</a>
+			</li>
+			<li>
+				<a href="monitores.html" target="pages_view">Monitores</a>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<iframe id="pages_view" name="pages_view" src="inicio.html" frameborder="0"></iframe>
+	</main>
+	<footer>
+		&copy; IAG Informática 2019
+	</footer>
+	<script>
+		const frame = document.getElementById('pages_view')
+		if(location.hash){
+			frame.src = location.hash.replace(/^#\/(.+)/, '$1')
+		}
+		frame.onload = () => {
+			frame.style.height = frame.contentDocument.body.scrollHeight + 'px'
+			document.title = frame.contentDocument.title
+			location.href = '#' + frame.contentWindow.location.pathname
+		}
+	</script>
+</body>
+</html>
